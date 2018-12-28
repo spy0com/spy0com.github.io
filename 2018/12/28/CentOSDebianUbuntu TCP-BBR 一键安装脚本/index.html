@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="">
+  <head><meta name="generator" content="Hexo 3.8.0">
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+<meta name="theme-color" content="#f8f5ec">
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="CentOSDebianUbuntu TCP-BBR 一键安装脚本">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/default" title="粗鄙之语">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.10.1">
+
+
+
+<link rel="canonical" href="http://www.spy0.com/2018/12/28/CentOSDebianUbuntu TCP-BBR 一键安装脚本/">
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css">
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/nprogress/nprogress.min.css">
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.10.1">
+
+
+
+  
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":true,"pjax":true};
+</script>
+
+    <title> CentOSDebianUbuntu TCP-BBR 一键安装脚本 - 粗鄙之语 </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">粗鄙之语</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            首页
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">粗鄙之语</a>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              首页
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          CentOSDebianUbuntu TCP-BBR 一键安装脚本
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-12-28
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+
+    <div class="post-content">
+      
+        <p><code>wget -N --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; bash bbr.sh</code></p>
+<pre class="brush:bash;toolbar:false">uname&#xA0;-r
+/&#x67E5;&#x770B;&#x5185;&#x6838;&#x7248;&#x672C;&#xFF0C;&#x542B;&#x6709;&#xA0;4.9.0&#xA0;&#x5C31;&#x8868;&#x793A;&#xA0;OK&#xA0;&#x4E86;
+sysctl&#xA0;net.ipv4.tcp_available_congestion_control
+/&#x8FD4;&#x56DE;&#x503C;&#x4E00;&#x822C;&#x4E3A;&#xFF1A;
+/&#xA0;net.ipv4.tcp_available_congestion_control&#xA0;=&#xA0;bbr&#xA0;cubic&#xA0;reno
+sysctl&#xA0;net.ipv4.tcp_congestion_control
+/&#x8FD4;&#x56DE;&#x503C;&#x4E00;&#x822C;&#x4E3A;&#xFF1A;
+/net.ipv4.tcp_congestion_control&#xA0;=&#xA0;bbr
+sysctl&#xA0;net.core.default_qdisc
+/&#x8FD4;&#x56DE;&#x503C;&#x4E00;&#x822C;&#x4E3A;&#xFF1A;
+/net.core.default_qdisc&#xA0;=&#xA0;fq
+lsmod&#xA0;|&#xA0;grep&#xA0;bbr
+/&#x8FD4;&#x56DE;&#x503C;&#x6709;&#xA0;tcp_bbr&#xA0;&#x6A21;&#x5757;&#x5373;&#x8BF4;&#x660E;bbr&#x5DF2;&#x542F;&#x52A8;</pre>
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="http://www.spy0.com"></a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="http://www.spy0.com/2018/12/28/CentOSDebianUbuntu TCP-BBR 一键安装脚本/">http://www.spy0.com/2018/12/28/CentOSDebianUbuntu TCP-BBR 一键安装脚本/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2018/12/28/NTP server not specified in etcntpstep-tickers or etcntp.conf/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">yum ntpdtae&#x8FD0;&#x884C;&#x540E;&#x62A5;&#x9519;&#xFF1A;</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/2018/12/28/Centos 6.x 防火墙操作/">
+        <span class="next-text nav-default">Centos 6.x 防火墙操作</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+   
+  </div>
+
+
+
+<div class="copyright">
+  <span class="power-by">
+驱动&托管&设计 - Hexo Github Even
+  </span>
+
+  <span class="copyright-year">
+
+    &copy; 
+   2018
+</span></div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+  
+
+
+
+  
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/pjax/jquery.pjax.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/nprogress/nprogress.min.js"></script>
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.10.1"></script>
+
+  </body>
+</html>
