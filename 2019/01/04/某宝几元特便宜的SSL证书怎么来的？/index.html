@@ -165,17 +165,23 @@
 
     
     
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#接下来开始折腾"><span class="toc-text">接下来开始折腾</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#下载并生成证书"><span class="toc-text">下载并生成证书</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#每90天更新一次即续费"><span class="toc-text">每90天更新一次即续费</span></a></li></ol></li></ol>
+    </div>
+  </div>
+
 
 
     <div class="post-content">
       
         <p>首先要知道为什么可以卖的这么便宜？很简单，因为免费啊！hahahahahha</p>
-<p>##接下来开始折腾</p>
-<blockquote>
+<h2 id="接下来开始折腾"><a href="#接下来开始折腾" class="headerlink" title="接下来开始折腾"></a>接下来开始折腾</h2><blockquote>
 <p>这个项目Let’s Encrypt就是提供一个期限为九十天的SSL(九十天一续费即可，续费免费)</p>
 </blockquote>
-<p>###下载并生成证书<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/letsencrypt/letsencrypt</span><br><span class="line">cd letsencrypt</span><br><span class="line">./certbot-auto --help all</span><br><span class="line">./certbot-auto certonly --standalone --email user@domain.com -d domain.com -d www.domain.com</span><br><span class="line"> </span><br><span class="line">生成后的证书在 /etc/letsencrypt/live/ 目录下。</span><br><span class="line">cert.pem  - Apache服务器端证书</span><br><span class="line">chain.pem  - Apache根证书和中继证书</span><br><span class="line">fullchain.pem  - Nginx所需要ssl_certificate文件</span><br><span class="line">privkey.pem - 安全证书KEY文件</span><br></pre></td></tr></table></figure></p>
-<p>###每90天更新一次即续费<br><code>./certbot-auto certonly --renew-by-default --email user@domain.com -d domain.com -d www.domain.com</code><br>如果怕忘记可以设置定时任务</p>
+<h3 id="下载并生成证书"><a href="#下载并生成证书" class="headerlink" title="下载并生成证书"></a>下载并生成证书</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/letsencrypt/letsencrypt</span><br><span class="line">cd letsencrypt</span><br><span class="line">./certbot-auto --help all</span><br><span class="line">./certbot-auto certonly --standalone --email user@domain.com -d domain.com -d www.domain.com</span><br><span class="line"> </span><br><span class="line">生成后的证书在 /etc/letsencrypt/live/ 目录下。</span><br><span class="line">cert.pem  - Apache服务器端证书</span><br><span class="line">chain.pem  - Apache根证书和中继证书</span><br><span class="line">fullchain.pem  - Nginx所需要ssl_certificate文件</span><br><span class="line">privkey.pem - 安全证书KEY文件</span><br></pre></td></tr></table></figure>
+<h3 id="每90天更新一次即续费"><a href="#每90天更新一次即续费" class="headerlink" title="每90天更新一次即续费"></a>每90天更新一次即续费</h3><p><code>./certbot-auto certonly --renew-by-default --email user@domain.com -d domain.com -d www.domain.com</code><br>如果怕忘记可以设置定时任务</p>
 
       
     </div>
