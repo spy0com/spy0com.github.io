@@ -152,6 +152,59 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/12/28/CentOSDebianUbuntu TCP-BBR 一键安装脚本/">CentOSDebianUbuntu TCP-BBR 一键安装脚本</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-12-28
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+
+    <div class="post-content">
+      
+        
+        
+
+        
+          <p><code>wget -N --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; bash bbr.sh</code></p>
+<pre class="brush:bash;toolbar:false">uname&#xA0;-r
+/&#x67E5;&#x770B;&#x5185;&#x6838;&#x7248;&#x672C;&#xFF0C;&#x542B;&#x6709;&#xA0;4.9.0&#xA0;&#x5C31;&#x8868;&#x793A;&#xA0;OK&#xA0;&#x4E86;
+sysctl&#xA0;net.ipv4.tcp_available_congestion_control
+/&#x8FD4;&#x56DE;&#x503C;&#x4E00;&#x822C;&#x4E3A;&#xFF1A;
+/&#xA0;net.ipv4.tcp_available_congestion_control&#xA0;=&#xA0;bbr&#xA0;cubic&#xA0;reno
+sysctl&#xA0;net.ipv4.tcp_congestion_control
+/&#x8FD4;&#x56DE;&#x503C;&#x4E00;&#x822C;&#x4E3A;&#xFF1A;
+/net.ipv4.tcp_congestion_control&#xA0;=&#xA0;bbr
+sysctl&#xA0;net.core.default_qdisc
+/&#x8FD4;&#x56DE;&#x503C;&#x4E00;&#x822C;&#x4E3A;&#xFF1A;
+/net.core.default_qdisc&#xA0;=&#xA0;fq
+lsmod&#xA0;|&#xA0;grep&#xA0;bbr
+/&#x8FD4;&#x56DE;&#x503C;&#x6709;&#xA0;tcp_bbr&#xA0;&#x6A21;&#x5757;&#x5373;&#x8BF4;&#x660E;bbr&#x5DF2;&#x542F;&#x52A8;</pre>
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+      
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/12/28/Centos 6.x 防火墙操作/">Centos 6.x 防火墙操作</a>
         
       </h1>
