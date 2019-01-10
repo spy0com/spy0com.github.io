@@ -17,7 +17,7 @@
 
 
 
-  <meta name="description" content="测试加密文章，密码test">
+  <meta name="description" content="linux怎么使用ssr">
 
 
 
@@ -40,7 +40,7 @@
 
 
 
-<link rel="canonical" href="http://www.ip.edu.rs/2018/12/28/1545982580/">
+<link rel="canonical" href="http://www.ip.edu.rs/2019/01/10/1547119319/">
 
 
 
@@ -88,7 +88,7 @@
   window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":true,"pjax":true};
 </script>
 
-    <title> 测试加密文章，密码test - 网络 and 创意 </title>
+    <title> linux怎么使用ssr - 网络 and 创意 </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -150,13 +150,13 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          测试加密文章，密码test
+          linux怎么使用ssr
         
       </h1>
 
       <div class="post-meta">
         <span class="post-time">
-          2018-12-28
+          2019-01-10
         </span>
         
         
@@ -165,24 +165,23 @@
 
     
     
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#下载-配置"><span class="toc-text">下载/配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用："><span class="toc-text">使用：</span></a></li></ol>
+    </div>
+  </div>
+
 
 
     <div class="post-content">
       
-        <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-<div id="hbe-security">
-  <div class="hbe-input-container">
-  <input type="password" class="hbe-form-control" id="pass" placeholder="Please enter the password to read the blog.">
-    <label for="pass">Please enter the password to read the blog.</label>
-    <div class="bottom-line"></div>
-  </div>
-</div>
-<div id="decryptionError" style="display: none;">Incorrect Password!</div>
-<div id="noContentError" style="display: none;">No content to display!</div>
-<div id="encrypt-blog" style="display:none">
-U2FsdGVkX187vliiMrGd676wPv3Zu7hO11HxlrlnMa7jBN89v/leLkKCuB4vBclOV9JUb7s8jol+kPgGtzT0cP3BQcqCwGmTkY1ytCOYQ04=
-</div>
-<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
+        <h2 id="下载-配置"><a href="#下载-配置" class="headerlink" title="下载/配置"></a>下载/配置</h2><p><code>git clone -b manyuser https://github.com/shadowsocksr-rm/shadowsocksr.git ssr</code></p>
+<p>进入ssr目录，删除user-config.json文件，并修改config.json文件。请复制以下信息并替换，GitHub上提供的文件引号有问题。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">    &quot;server&quot;: &quot;服务器地址&quot;,</span><br><span class="line">    &quot;server_ipv6&quot;: &quot;服务器地址&quot;,</span><br><span class="line">    &quot;server_port&quot;: 端口号,</span><br><span class="line">    &quot;local_address&quot;: &quot;127.0.0.1&quot;,</span><br><span class="line">    &quot;local_port&quot;: 1090,</span><br><span class="line">    &quot;password&quot;: &quot;ss密码&quot;,</span><br><span class="line">    &quot;timeout&quot;: 300,</span><br><span class="line">    &quot;udp_timeout&quot;: 60,</span><br><span class="line">    &quot;method&quot;: &quot;加密方式&quot;,</span><br><span class="line">    &quot;protocol&quot;: &quot;协议&quot;,</span><br><span class="line">    &quot;obfs&quot;: &quot;混淆&quot;,</span><br><span class="line">    &quot;obfs_param&quot;: &quot;混淆参数&quot;,</span><br><span class="line">    &quot;dns_ipv6&quot;: false,</span><br><span class="line">    &quot;connect_verbose_info&quot;: 1,</span><br><span class="line">    &quot;redirect&quot;: &quot;&quot;,</span><br><span class="line">    &quot;fast_open&quot;: true</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="使用："><a href="#使用：" class="headerlink" title="使用："></a>使用：</h2><p>进入shadowsocks文件下执行local.py</p>
+<p><code>python local.py</code></p>
+<p>然后打开浏览器配置浏览器的socks5设置，服务器127.0.0.1 端口1080 即可开始常有网络</p>
+
       
     </div>
 
@@ -203,15 +202,9 @@ U2FsdGVkX187vliiMrGd676wPv3Zu7hO11HxlrlnMa7jBN89v/leLkKCuB4vBclOV9JUb7s8jol+kPgG
         
   <nav class="post-nav">
     
-      <a class="prev" href="/2019/01/04/某宝几元特便宜的SSL证书怎么来的？/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">某宝几元特便宜的SSL证书怎么来的？</span>
-        <span class="prev-text nav-mobile">上一篇</span>
-      </a>
     
-    
-      <a class="next" href="/2018/12/28/全日制专本、成人高考、网络教育、自学考试毕业证编号格式/">
-        <span class="next-text nav-default">全日制专本、成人高考、网络教育、自学考试毕业证编号格式</span>
+      <a class="next" href="/2019/01/04/某宝几元特便宜的SSL证书怎么来的？/">
+        <span class="next-text nav-default">某宝几元特便宜的SSL证书怎么来的？</span>
         <span class="prev-text nav-mobile">下一篇</span>
         <i class="iconfont icon-right"></i>
       </a>
