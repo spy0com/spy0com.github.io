@@ -29,7 +29,7 @@
 
 
 
-  <link rel="alternate" href="/default" title="网络 and 创意">
+  <link rel="alternate" href="/default" title="粗鄙之语">
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-<link rel="canonical" href="http://www.ip.edu.rs/">
+<link rel="canonical" href="http://blog.spy0.com/">
 
 
 
@@ -86,12 +86,12 @@
   window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":true,"pjax":true};
 </script>
 
-    <title> 网络 and 创意 </title>
+    <title> 粗鄙之语 </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/." class="logo">网络 and 创意</a>
+    <a href="/." class="logo">粗鄙之语</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -117,7 +117,7 @@
 
     <div class="container" id="mobile-panel">
       <header id="header" class="header"><div class="logo-wrapper">
-  <a href="/." class="logo">网络 and 创意</a>
+  <a href="/." class="logo">粗鄙之语</a>
 </div>
 
 <nav class="site-navbar">
@@ -377,6 +377,82 @@
     <header class="post-header">
       <h1 class="post-title">
         
+          <a class="post-link" href="/2018/12/28/解决ssr InternalError1043/">解决ssr InternalError1043</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-12-28
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+
+    <div class="post-content">
+      
+        
+        
+
+        
+           <pre class="brush:bash;toolbar:false">[root@shadowsocksr]#&#xA0;python&#xA0;server.py
+IPv6&#xA0;support
+2018-05-13&#xA0;14:58:54&#xA0;INFO&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;util.py:85&#xA0;loading&#xA0;libcrypto&#xA0;from&#xA0;libcrypto.so.10
+2018-05-13&#xA0;14:58:54&#xA0;INFO&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;asyncdns.py:324&#xA0;dns&#xA0;server:&#xA0;[(&apos;8.8.8.8&apos;,&#xA0;53),&#xA0;(&apos;8.8.4.4&apos;,&#xA0;53)]
+2018-05-13&#xA0;14:58:54&#xA0;INFO&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;shell.py:72&#xA0;ShadowsocksR&#xA0;3.4.0&#xA0;2017-07-27
+2018-05-13&#xA0;14:58:54&#xA0;INFO&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;db_transfer.py:238&#xA0;current&#xA0;process&#xA0;RLIMIT_NOFILE&#xA0;resource:&#xA0;soft&#xA0;1024&#xA0;hard&#xA0;4096
+2018-05-13&#xA0;14:58:55&#xA0;ERROR&#xA0;&#xA0;&#xA0;&#xA0;db_transfer.py:266&#xA0;Traceback&#xA0;(most&#xA0;recent&#xA0;call&#xA0;last):
+&#xA0;&#xA0;File&#xA0;&quot;/root/shadowsocksr/db_transfer.py&quot;,&#xA0;line&#xA0;248,&#xA0;in&#xA0;thread_db
+&#xA0;&#xA0;&#xA0;&#xA0;rows&#xA0;=&#xA0;db_instance.pull_db_all_user()
+&#xA0;&#xA0;File&#xA0;&quot;/root/shadowsocksr/db_transfer.py&quot;,&#xA0;line&#xA0;383,&#xA0;in&#xA0;pull_db_all_user
+&#xA0;&#xA0;&#xA0;&#xA0;db=self.cfg[&quot;db&quot;],&#xA0;charset=&apos;utf8&apos;)
+&#xA0;&#xA0;File&#xA0;&quot;/usr/lib/python2.6/site-packages/cymysql/__init__.py&quot;,&#xA0;line&#xA0;81,&#xA0;in&#xA0;Connect
+&#xA0;&#xA0;&#xA0;&#xA0;return&#xA0;Connection(*args,&#xA0;**kwargs)
+&#xA0;&#xA0;File&#xA0;&quot;/usr/lib/python2.6/site-packages/cymysql/connections.py&quot;,&#xA0;line&#xA0;237,&#xA0;in&#xA0;__init__
+&#xA0;&#xA0;&#xA0;&#xA0;self._connect()
+&#xA0;&#xA0;File&#xA0;&quot;/usr/lib/python2.6/site-packages/cymysql/connections.py&quot;,&#xA0;line&#xA0;403,&#xA0;in&#xA0;_connect
+&#xA0;&#xA0;&#xA0;&#xA0;self._request_authentication()
+&#xA0;&#xA0;File&#xA0;&quot;/usr/lib/python2.6/site-packages/cymysql/connections.py&quot;,&#xA0;line&#xA0;477,&#xA0;in&#xA0;_request_authentication
+&#xA0;&#xA0;&#xA0;&#xA0;auth_packet&#xA0;=&#xA0;MysqlPacket(self)
+&#xA0;&#xA0;File&#xA0;&quot;/usr/lib/python2.6/site-packages/cymysql/packet.py&quot;,&#xA0;line&#xA0;67,&#xA0;in&#xA0;__init__
+&#xA0;&#xA0;&#xA0;&#xA0;raise_mysql_exception(self.__data)
+&#xA0;&#xA0;File&#xA0;&quot;/usr/lib/python2.6/site-packages/cymysql/err.py&quot;,&#xA0;line&#xA0;142,&#xA0;in&#xA0;raise_mysql_exception
+&#xA0;&#xA0;&#xA0;&#xA0;_check_mysql_exception(errinfo)
+&#xA0;&#xA0;File&#xA0;&quot;/usr/lib/python2.6/site-packages/cymysql/err.py&quot;,&#xA0;line&#xA0;138,&#xA0;in&#xA0;_check_mysql_exception
+&#xA0;&#xA0;&#xA0;&#xA0;raise&#xA0;InternalError(errno,&#xA0;errorvalue)
+InternalError:&#xA0;(1043,&#xA0;u&apos;Bad&#xA0;handshake&apos;)</pre>
+
+<p>&#x89E3;&#x51B3;&#xFF1A;</p>
+<pre class="brush:bash;toolbar:false">wget&#xA0;https://pypi.python.org/packages/source/p/pip/pip-9.0.1.tar.gz&#xA0;--no-check-certificate
+tar&#xA0;-xzvf&#xA0;pip-9.0.1.tar.gz
+cd&#xA0;pip-9.0.1
+python&#xA0;setup.py&#xA0;install
+pip&#xA0;install&#xA0;cymysql==0.9.4</pre>
+
+<p>&#x56E0;pip&#x7248;&#x672C;&#x592A;&#x9AD8; &#x65E0;&#x6CD5;&#x6307;&#x5B9A;&#x5B89;&#x88C5;&#x4F4E;&#x7248;&#x672C;cymysql&#xFF0C;&#x964D;&#x4F4E;pip&#x7248;&#x672C;&#x6307;&#x5B9A;&#x5B89;&#x88C5;&#x4F4E;&#x7248;&#x672C;cymysql&#x5C31;&#x884C;&#x4E86;</p>
+<p>&#x9519;&#x8BEF;&#x5C31;&#x662F;pip&#x548C; cymysql&#x7248;&#x672C;&#x90FD;&#x592A;&#x9AD8;</p>
+
+        
+      
+    </div>
+
+    
+
+    
+
+  </article>
+
+      
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
           <a class="post-link" href="/2018/12/28/魔改 BBR 一键脚本 for Debian CentOS/">BBR &#x4E00;&#x952E;&#x811A;&#x672C;&#xFF0C;&#x5305;&#x542B;</a>
         
       </h1>
@@ -464,7 +540,7 @@ bash&#xA0;tcp_nanqinlang-1.3.2.sh</pre>
     <header class="post-header">
       <h1 class="post-title">
         
-          <a class="post-link" href="/2018/12/28/安装tor，免费获得.onion域名/">安装tor，免费获得.onion域名</a>
+          <a class="post-link" href="/2018/12/28/河南高等教育自学考试准考证编码方式/">河南高等教育自学考试准考证编码方式</a>
         
       </h1>
 
@@ -487,24 +563,7 @@ bash&#xA0;tcp_nanqinlang-1.3.2.sh</pre>
         
 
         
-          <p>&#x5148;&#x8BF4;&#x597D;&#xFF0C;&#x522B;&#x95EE;&#x6211;&#x8FD9;&#x57DF;&#x540D;&#x600E;&#x4E48;&#x6CA1;&#x6CE8;&#x518C;&#x5546;&#xFF0C;&#x540E;&#x7F00;&#x600E;&#x4E48;&#x8FD9;&#x4E48;&#x5947;&#x602A;&#xFF0C;&#x600E;&#x4E48;&#x5F04;&#x597D;&#x4E86;&#x4E0D;&#x80FD;&#x8BBF;&#x95EE;&#xFF0C;&#x5148;&#x67E5;&#x67E5;&#x518D;&#x8BF4;&#x8BDD;</p>
-<pre class="brush:bash;toolbar:false">yum&#xA0;install&#xA0;tor&#xA0;-y
-apt-get&#xA0;install&#xA0;tor&#xA0;-y</pre>
-
-<p>&#x7136;&#x540E;&#x5199;&#x5165;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
-<pre class="brush:bash;toolbar:false">echo&#xA0;&quot;HiddenServiceDir&#xA0;/var/lib/tor/hidden_service/&quot;&#xA0;&gt;&gt;&#xA0;/etc/tor/torrc
-echo&#xA0;&quot;HiddenServicePort&#xA0;80&#xA0;127.0.0.1:8080&quot;&#xA0;&gt;&gt;&#xA0;/etc/tor/torrc</pre>
-
-<p>&#x91CD;&#x542F;tor</p>
-<pre class="brush:bash;toolbar:false">service&#xA0;tor&#xA0;restart</pre>
-
-<p>&#x83B7;&#x53D6;&#x57DF;&#x540D;</p>
-<pre class="brush:bash;toolbar:false">cat&#xA0;&#xA0;/var/lib/tor/hidden_service/hostname</pre>
-
-<p>8080&#x662F;&#x6E90;&#x670D;&#x52A1;&#x7AEF;&#x53E3;&#xFF0C;&#x4F8B;&#x5982;&#x6211;&#x8981;&#x8F6C;&#x53D1;&#x67D0;&#x7F51;&#x7AD9;80&#xFF0C;HiddenServicePort 80 2.3.3.3:80</p>
-<p>&#x4E00;&#x4E2A;&#x5751;&#xFF1A;tor&#x5E76;&#x6CA1;&#x6709;&#x76D1;&#x542C;80&#x7AEF;&#x53E3;&#xFF0C;&#x4F46;&#x9AD8;&#x4F4D;&#x7AEF;&#x53E3;&#x5FC5;&#x987B;&#x5F00;&#x542F;</p>
-<p>&#x539F;&#x5E16;:<a href="http://www.hostloc.com/thread-350210-1-1.html" target="_blank" rel="noopener">vps&#x5B89;&#x88C5;tor&#xFF0C;&#x83B7;&#x53D6;.onion&#x57DF;&#x540D;</a></p>
-<p>&#x5EF6;&#x4F38;:<a href="http://it.taocms.org/03/7139.htm" target="_blank" rel="noopener">&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; Tor .onion &#x7F51;&#x7AD9;[&#x66F4;&#x65B0;]</a></p>
+          <p>&#x51C6;&#x8003;&#x8BC1;&#x53F7;&#x7531;12&#x4F4D;&#x6784;&#x6210;&#xFF1A;<br>&#x7B2C;1-2&#x4F4D;&#x662F;&#x5730;&#x5E02;&#x4FE1;&#x606F;&#xFF1A;01-&#x90D1;&#x5DDE;&#xFF0C;02-&#x5F00;&#x5C01;&#xFF0C;03-&#x6D1B;&#x9633;&#xFF0C;04-&#x5E73;&#x9876;&#x5C71;&#xFF0C;05-&#x5B89;&#x9633;&#xFF0C;06-&#x9E64;&#x58C1;&#xFF0C;07-&#x65B0;&#x4E61;&#xFF0C;08-&#x7126;&#x4F5C;&#xFF0C;09-&#x6FEE;&#x9633;&#xFF0C;10-&#x8BB8;&#x660C;&#xFF0C;11-&#x6F2F;&#x6CB3;&#xFF0C;12-&#x4E09;&#x95E8;&#x5CE1;&#xFF0C;13-&#x5357;&#x9633;&#xFF0C;14-&#x5546;&#x4E18;&#xFF0C;15&#x4FE1;&#x9633;&#xFF0C;18-&#x6D4E;&#x6E90;&#xFF0C;21-&#x5DE9;&#x4E49;&#xFF0C;23-&#x6C38;&#x57CE;&#xFF0C;24-&#x56FA;&#x59CB;&#xFF0C;25-&#x9093;&#x5DDE;&#xFF0C;27-&#x5468;&#x53E3;&#xFF0C;28-&#x9A7B;&#x9A6C;&#x5E97;&#x7B49;&#x7B49;&#x3002;<br>&#x7B2C;3-4&#x4F4D;&#x662F;&#x533A;&#x53BF;&#x4FE1;&#x606F;&#xFF1A;&#x6BD4;&#x5982;&#x90D1;&#x5DDE;&#x5E02;&#x7684;&#x8003;&#x751F;&#xFF0C;05-&#x91D1;&#x6C34;&#x533A;&#xFF0C;02-&#x4E2D;&#x6E90;&#x533A;&#xFF0C;03-&#x4E8C;&#x4E03;&#x533A;&#xFF0C;04-&#x7BA1;&#x57CE;&#x533A;&#xFF0C;08-&#x60E0;&#x6D4E;&#x533A;&#xFF0C;06-&#x4E0A;&#x8857;&#x533A;&#xFF0C;82-&#x8365;&#x9633;&#x5E02;&#xFF0C;83-&#x65B0;&#x5BC6;&#x5E02;&#xFF0C;85-&#x767B;&#x5C01;&#x5E02;&#xFF0C;84-&#x65B0;&#x90D1;&#x5E02;&#xFF0C;22-&#x4E2D;&#x725F;&#x53BF;&#x3002;<br>&#x7B2C;5-6&#x4F4D;&#x662F;&#x62A5;&#x8003;&#x5E74;&#x4EFD;&#x3002;&#x6BD4;&#x5982;&#x6837;&#x54C1;&#x4E2D;&#x7684;5-6&#x4F4D;&#x662F;&#x201C;11&#x201D;&#xFF0C;&#x8868;&#x793A;2011&#x5E74;&#x62A5;&#x8003;&#x3002;<br>&#x7B2C;7&#x4F4D;&#x8868;&#x793A;&#x4E0A;&#x3001;&#x4E0B;&#x534A;&#x5E74;&#x3002;&#x201C;1&#x201D;&#x4EE3;&#x8868;&#x4E0A;&#x534A;&#x5E74;&#x62A5;&#x8003;&#xFF0C;&#x201C;2&#x201D;&#x4EE3;&#x8868;&#x4E0B;&#x534A;&#x5E74;&#x62A5;&#x8003;&#x3002;<br>&#x7B2C;8-12&#x4F4D;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x6700;&#x540E;5&#x4F4D;&#xFF09;&#x8868;&#x793A;&#x6D41;&#x6C34;&#x53F7;&#xFF0C;&#x4ECE;00001&#x5F00;&#x59CB;&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#x62A5;&#x540D;&#x7684;&#x8003;&#x751F;&#xFF0C;&#x6309;&#x81EA;&#x7136;&#x987A;&#x5E8F;&#x5F80;&#x540E;&#x9762;&#x6392;&#x5217;&#x3002;</p>
 
         
       
@@ -615,7 +674,7 @@ service&#xA0;iptables&#xA0;restart&#xA0;&#xA0;&#xA0;&#xA0;&#x91CD;&#x542F;&#x963
     <header class="post-header">
       <h1 class="post-title">
         
-          <a class="post-link" href="/2018/12/28/河南高等教育自学考试准考证编码方式/">河南高等教育自学考试准考证编码方式</a>
+          <a class="post-link" href="/2018/12/28/安装tor，免费获得.onion域名/">安装tor，免费获得.onion域名</a>
         
       </h1>
 
@@ -638,83 +697,24 @@ service&#xA0;iptables&#xA0;restart&#xA0;&#xA0;&#xA0;&#xA0;&#x91CD;&#x542F;&#x963
         
 
         
-          <p>&#x51C6;&#x8003;&#x8BC1;&#x53F7;&#x7531;12&#x4F4D;&#x6784;&#x6210;&#xFF1A;<br>&#x7B2C;1-2&#x4F4D;&#x662F;&#x5730;&#x5E02;&#x4FE1;&#x606F;&#xFF1A;01-&#x90D1;&#x5DDE;&#xFF0C;02-&#x5F00;&#x5C01;&#xFF0C;03-&#x6D1B;&#x9633;&#xFF0C;04-&#x5E73;&#x9876;&#x5C71;&#xFF0C;05-&#x5B89;&#x9633;&#xFF0C;06-&#x9E64;&#x58C1;&#xFF0C;07-&#x65B0;&#x4E61;&#xFF0C;08-&#x7126;&#x4F5C;&#xFF0C;09-&#x6FEE;&#x9633;&#xFF0C;10-&#x8BB8;&#x660C;&#xFF0C;11-&#x6F2F;&#x6CB3;&#xFF0C;12-&#x4E09;&#x95E8;&#x5CE1;&#xFF0C;13-&#x5357;&#x9633;&#xFF0C;14-&#x5546;&#x4E18;&#xFF0C;15&#x4FE1;&#x9633;&#xFF0C;18-&#x6D4E;&#x6E90;&#xFF0C;21-&#x5DE9;&#x4E49;&#xFF0C;23-&#x6C38;&#x57CE;&#xFF0C;24-&#x56FA;&#x59CB;&#xFF0C;25-&#x9093;&#x5DDE;&#xFF0C;27-&#x5468;&#x53E3;&#xFF0C;28-&#x9A7B;&#x9A6C;&#x5E97;&#x7B49;&#x7B49;&#x3002;<br>&#x7B2C;3-4&#x4F4D;&#x662F;&#x533A;&#x53BF;&#x4FE1;&#x606F;&#xFF1A;&#x6BD4;&#x5982;&#x90D1;&#x5DDE;&#x5E02;&#x7684;&#x8003;&#x751F;&#xFF0C;05-&#x91D1;&#x6C34;&#x533A;&#xFF0C;02-&#x4E2D;&#x6E90;&#x533A;&#xFF0C;03-&#x4E8C;&#x4E03;&#x533A;&#xFF0C;04-&#x7BA1;&#x57CE;&#x533A;&#xFF0C;08-&#x60E0;&#x6D4E;&#x533A;&#xFF0C;06-&#x4E0A;&#x8857;&#x533A;&#xFF0C;82-&#x8365;&#x9633;&#x5E02;&#xFF0C;83-&#x65B0;&#x5BC6;&#x5E02;&#xFF0C;85-&#x767B;&#x5C01;&#x5E02;&#xFF0C;84-&#x65B0;&#x90D1;&#x5E02;&#xFF0C;22-&#x4E2D;&#x725F;&#x53BF;&#x3002;<br>&#x7B2C;5-6&#x4F4D;&#x662F;&#x62A5;&#x8003;&#x5E74;&#x4EFD;&#x3002;&#x6BD4;&#x5982;&#x6837;&#x54C1;&#x4E2D;&#x7684;5-6&#x4F4D;&#x662F;&#x201C;11&#x201D;&#xFF0C;&#x8868;&#x793A;2011&#x5E74;&#x62A5;&#x8003;&#x3002;<br>&#x7B2C;7&#x4F4D;&#x8868;&#x793A;&#x4E0A;&#x3001;&#x4E0B;&#x534A;&#x5E74;&#x3002;&#x201C;1&#x201D;&#x4EE3;&#x8868;&#x4E0A;&#x534A;&#x5E74;&#x62A5;&#x8003;&#xFF0C;&#x201C;2&#x201D;&#x4EE3;&#x8868;&#x4E0B;&#x534A;&#x5E74;&#x62A5;&#x8003;&#x3002;<br>&#x7B2C;8-12&#x4F4D;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x6700;&#x540E;5&#x4F4D;&#xFF09;&#x8868;&#x793A;&#x6D41;&#x6C34;&#x53F7;&#xFF0C;&#x4ECE;00001&#x5F00;&#x59CB;&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#x62A5;&#x540D;&#x7684;&#x8003;&#x751F;&#xFF0C;&#x6309;&#x81EA;&#x7136;&#x987A;&#x5E8F;&#x5F80;&#x540E;&#x9762;&#x6392;&#x5217;&#x3002;</p>
+          <p>&#x5148;&#x8BF4;&#x597D;&#xFF0C;&#x522B;&#x95EE;&#x6211;&#x8FD9;&#x57DF;&#x540D;&#x600E;&#x4E48;&#x6CA1;&#x6CE8;&#x518C;&#x5546;&#xFF0C;&#x540E;&#x7F00;&#x600E;&#x4E48;&#x8FD9;&#x4E48;&#x5947;&#x602A;&#xFF0C;&#x600E;&#x4E48;&#x5F04;&#x597D;&#x4E86;&#x4E0D;&#x80FD;&#x8BBF;&#x95EE;&#xFF0C;&#x5148;&#x67E5;&#x67E5;&#x518D;&#x8BF4;&#x8BDD;</p>
+<pre class="brush:bash;toolbar:false">yum&#xA0;install&#xA0;tor&#xA0;-y
+apt-get&#xA0;install&#xA0;tor&#xA0;-y</pre>
 
-        
-      
-    </div>
+<p>&#x7136;&#x540E;&#x5199;&#x5165;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<pre class="brush:bash;toolbar:false">echo&#xA0;&quot;HiddenServiceDir&#xA0;/var/lib/tor/hidden_service/&quot;&#xA0;&gt;&gt;&#xA0;/etc/tor/torrc
+echo&#xA0;&quot;HiddenServicePort&#xA0;80&#xA0;127.0.0.1:8080&quot;&#xA0;&gt;&gt;&#xA0;/etc/tor/torrc</pre>
 
-    
+<p>&#x91CD;&#x542F;tor</p>
+<pre class="brush:bash;toolbar:false">service&#xA0;tor&#xA0;restart</pre>
 
-    
+<p>&#x83B7;&#x53D6;&#x57DF;&#x540D;</p>
+<pre class="brush:bash;toolbar:false">cat&#xA0;&#xA0;/var/lib/tor/hidden_service/hostname</pre>
 
-  </article>
-
-      
-        
-  <article class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        
-          <a class="post-link" href="/2018/12/28/解决ssr InternalError1043/">解决ssr InternalError1043</a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <span class="post-time">
-          2018-12-28
-        </span>
-        
-        
-      </div>
-    </header>
-
-    
-    
-
-
-    <div class="post-content">
-      
-        
-        
-
-        
-           <pre class="brush:bash;toolbar:false">[root@shadowsocksr]#&#xA0;python&#xA0;server.py
-IPv6&#xA0;support
-2018-05-13&#xA0;14:58:54&#xA0;INFO&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;util.py:85&#xA0;loading&#xA0;libcrypto&#xA0;from&#xA0;libcrypto.so.10
-2018-05-13&#xA0;14:58:54&#xA0;INFO&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;asyncdns.py:324&#xA0;dns&#xA0;server:&#xA0;[(&apos;8.8.8.8&apos;,&#xA0;53),&#xA0;(&apos;8.8.4.4&apos;,&#xA0;53)]
-2018-05-13&#xA0;14:58:54&#xA0;INFO&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;shell.py:72&#xA0;ShadowsocksR&#xA0;3.4.0&#xA0;2017-07-27
-2018-05-13&#xA0;14:58:54&#xA0;INFO&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;db_transfer.py:238&#xA0;current&#xA0;process&#xA0;RLIMIT_NOFILE&#xA0;resource:&#xA0;soft&#xA0;1024&#xA0;hard&#xA0;4096
-2018-05-13&#xA0;14:58:55&#xA0;ERROR&#xA0;&#xA0;&#xA0;&#xA0;db_transfer.py:266&#xA0;Traceback&#xA0;(most&#xA0;recent&#xA0;call&#xA0;last):
-&#xA0;&#xA0;File&#xA0;&quot;/root/shadowsocksr/db_transfer.py&quot;,&#xA0;line&#xA0;248,&#xA0;in&#xA0;thread_db
-&#xA0;&#xA0;&#xA0;&#xA0;rows&#xA0;=&#xA0;db_instance.pull_db_all_user()
-&#xA0;&#xA0;File&#xA0;&quot;/root/shadowsocksr/db_transfer.py&quot;,&#xA0;line&#xA0;383,&#xA0;in&#xA0;pull_db_all_user
-&#xA0;&#xA0;&#xA0;&#xA0;db=self.cfg[&quot;db&quot;],&#xA0;charset=&apos;utf8&apos;)
-&#xA0;&#xA0;File&#xA0;&quot;/usr/lib/python2.6/site-packages/cymysql/__init__.py&quot;,&#xA0;line&#xA0;81,&#xA0;in&#xA0;Connect
-&#xA0;&#xA0;&#xA0;&#xA0;return&#xA0;Connection(*args,&#xA0;**kwargs)
-&#xA0;&#xA0;File&#xA0;&quot;/usr/lib/python2.6/site-packages/cymysql/connections.py&quot;,&#xA0;line&#xA0;237,&#xA0;in&#xA0;__init__
-&#xA0;&#xA0;&#xA0;&#xA0;self._connect()
-&#xA0;&#xA0;File&#xA0;&quot;/usr/lib/python2.6/site-packages/cymysql/connections.py&quot;,&#xA0;line&#xA0;403,&#xA0;in&#xA0;_connect
-&#xA0;&#xA0;&#xA0;&#xA0;self._request_authentication()
-&#xA0;&#xA0;File&#xA0;&quot;/usr/lib/python2.6/site-packages/cymysql/connections.py&quot;,&#xA0;line&#xA0;477,&#xA0;in&#xA0;_request_authentication
-&#xA0;&#xA0;&#xA0;&#xA0;auth_packet&#xA0;=&#xA0;MysqlPacket(self)
-&#xA0;&#xA0;File&#xA0;&quot;/usr/lib/python2.6/site-packages/cymysql/packet.py&quot;,&#xA0;line&#xA0;67,&#xA0;in&#xA0;__init__
-&#xA0;&#xA0;&#xA0;&#xA0;raise_mysql_exception(self.__data)
-&#xA0;&#xA0;File&#xA0;&quot;/usr/lib/python2.6/site-packages/cymysql/err.py&quot;,&#xA0;line&#xA0;142,&#xA0;in&#xA0;raise_mysql_exception
-&#xA0;&#xA0;&#xA0;&#xA0;_check_mysql_exception(errinfo)
-&#xA0;&#xA0;File&#xA0;&quot;/usr/lib/python2.6/site-packages/cymysql/err.py&quot;,&#xA0;line&#xA0;138,&#xA0;in&#xA0;_check_mysql_exception
-&#xA0;&#xA0;&#xA0;&#xA0;raise&#xA0;InternalError(errno,&#xA0;errorvalue)
-InternalError:&#xA0;(1043,&#xA0;u&apos;Bad&#xA0;handshake&apos;)</pre>
-
-<p>&#x89E3;&#x51B3;&#xFF1A;</p>
-<pre class="brush:bash;toolbar:false">wget&#xA0;https://pypi.python.org/packages/source/p/pip/pip-9.0.1.tar.gz&#xA0;--no-check-certificate
-tar&#xA0;-xzvf&#xA0;pip-9.0.1.tar.gz
-cd&#xA0;pip-9.0.1
-python&#xA0;setup.py&#xA0;install
-pip&#xA0;install&#xA0;cymysql==0.9.4</pre>
-
-<p>&#x56E0;pip&#x7248;&#x672C;&#x592A;&#x9AD8; &#x65E0;&#x6CD5;&#x6307;&#x5B9A;&#x5B89;&#x88C5;&#x4F4E;&#x7248;&#x672C;cymysql&#xFF0C;&#x964D;&#x4F4E;pip&#x7248;&#x672C;&#x6307;&#x5B9A;&#x5B89;&#x88C5;&#x4F4E;&#x7248;&#x672C;cymysql&#x5C31;&#x884C;&#x4E86;</p>
-<p>&#x9519;&#x8BEF;&#x5C31;&#x662F;pip&#x548C; cymysql&#x7248;&#x672C;&#x90FD;&#x592A;&#x9AD8;</p>
+<p>8080&#x662F;&#x6E90;&#x670D;&#x52A1;&#x7AEF;&#x53E3;&#xFF0C;&#x4F8B;&#x5982;&#x6211;&#x8981;&#x8F6C;&#x53D1;&#x67D0;&#x7F51;&#x7AD9;80&#xFF0C;HiddenServicePort 80 2.3.3.3:80</p>
+<p>&#x4E00;&#x4E2A;&#x5751;&#xFF1A;tor&#x5E76;&#x6CA1;&#x6709;&#x76D1;&#x542C;80&#x7AEF;&#x53E3;&#xFF0C;&#x4F46;&#x9AD8;&#x4F4D;&#x7AEF;&#x53E3;&#x5FC5;&#x987B;&#x5F00;&#x542F;</p>
+<p>&#x539F;&#x5E16;:<a href="http://www.hostloc.com/thread-350210-1-1.html" target="_blank" rel="noopener">vps&#x5B89;&#x88C5;tor&#xFF0C;&#x83B7;&#x53D6;.onion&#x57DF;&#x540D;</a></p>
+<p>&#x5EF6;&#x4F38;:<a href="http://it.taocms.org/03/7139.htm" target="_blank" rel="noopener">&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; Tor .onion &#x7F51;&#x7AD9;[&#x66F4;&#x65B0;]</a></p>
 
         
       
